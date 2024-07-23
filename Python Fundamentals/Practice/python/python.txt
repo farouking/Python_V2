@@ -1,0 +1,5 @@
+ajax
+flask
+flask_mysql
+Fundamentals
+maysql
