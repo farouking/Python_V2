@@ -1,4 +1,4 @@
-use dojos_and_ninjas_schema; 
+use dojos_and_ninjas_schema;  
 /* select * from */
 select * from dojos;
 /* Add 03 dojo*/
