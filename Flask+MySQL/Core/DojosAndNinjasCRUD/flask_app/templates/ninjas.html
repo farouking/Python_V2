@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Ninjas</title>
+    <link rel = "stylesheet" type = "text/css" href = "../static/styles.css">
+</head>
+<body>
+    
+<div class = "ninjaPage">
+
+    <div class = "newNinja">
+
+        <h2> New Ninja </h2>
+
+        <form action = '/ninjas/create' method = "post">
+
+            <div>
+
+                <label for = "dojo"> Dojo: </label>
+
+                <select name = "dojos">
+
+                    {% for dojo in dojos %}
+
+                        <option value = "{{dojo.id}}"> {{dojo.name}} </option>
+
+                    {% endfor %}
+                
+                </select>
+
+            </div>
+
+            <div>
+
+                <label for = "first_name"> First Name: </label>
+
+                <input type = "text" name = "first_name">
+
+            </div>
+
+            <div>
+
+                <label for = "last_name"> Last Name: </label>
+
+                <input type = "text" name = "last_name">
+
+            </div>
+
+            <div class = 'age'>
+
+                <label for = "age"> Age: </label>
+
+                <input type = "age" name = "age">
+
+            </div>
+
+                <input class = "ninjabutton" type = "submit" value = "Create">
+        
+        </form>
+
+    </div>
+
+</div>
+
+<a class = "homebutton" href = '/'> Home </a>
+
+</body>
+</html>

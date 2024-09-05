@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Ninja Data</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+</head>
+<body>
+
+<div class="dojoPage">
+
+    <div class="dojoNinjas">
+
+        {% if dojo_info_w_ninjas %}
+
+        <h2>{{ dojo_info_w_ninjas[0].dojo }} Ninjas</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for ninja in dojo_info_w_ninjas %}
+                <tr>
+                    <td>{{ ninja.first_name }}</td>
+                    <td>{{ ninja.last_name }}</td>
+                    <td>{{ ninja.age }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+        {% else %}
+
+        <h2>No Ninjas in this Dojo yet!</h2>
+
+        {% endif %}
+
+    </div>
+
+    <a class="dojohomebutton" href="/dojos">Home</a>
+
+</div>
+
+</body>
+</html>
